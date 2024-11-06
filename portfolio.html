@@ -25,7 +25,7 @@
                         <a class="nav-link" href="/">ABOUT</a>
                     </li>
                     <li class="nav-item-active">
-                        <a class="nav-link" href="#portfolio">PORTFOLIO <span class="arrow"></span></a>
+                        <a class="nav-link" href="portfolio.html">PORTFOLIO <span class="arrow"></span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#team">TEAM <span class="arrow"></span></a>
@@ -84,126 +84,20 @@
     </div>
 </section>
 
-<section class="portfolio-section" style="height: 80vh;">
+<!-- Portfolio Section -->
+<section class="portfolio-section">
     <h1>MEET OUR PORTFOLIO<span class="pink-dot">.</span></h1>
-
-    <!-- Category Buttons -->
-    <div class="btn-secondarys text-center mb-4">
-        <button class="btn-secondary btn-active" data-slide="0">Agriculture & Food</button>
-        <button class="btn-secondary" data-slide="1">Climate & Sustainability</button>
-        <button class="btn-secondary" data-slide="2">Consumer & Lifestyle</button>
-        <button class="btn-secondary" data-slide="3">Deep Tech</button>
-    </div>
-
-    <!-- Bootstrap Carousel for Portfolio Companies -->
-    <div id="carouselExampleSlidesOnly" class="carousel slide">
-        <div class="carousel-inner">
-            <!-- Slide 1: Agriculture & Food -->
-            <div class="carousel-item active">
-                <div class="d-flex justify-content-around">
-                    <div class="portfolio-company">
-                        <h3>FarmTech</h3>
-                        <p>Innovating sustainable farming solutions.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>AgroGen</h3>
-                        <p>Advanced genetic research in agriculture.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>GreenHarvest</h3>
-                        <p>Empowering farmers with AI tools.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>CropCare</h3>
-                        <p>Organic pest control solutions.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>FreshYield</h3>
-                        <p>Blockchain solutions for food supply chains.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 2: Climate & Sustainability -->
-            <div class="carousel-item">
-                <div class="d-flex justify-content-around">
-                    <div class="portfolio-company">
-                        <h3>EcoWorks</h3>
-                        <p>Building eco-friendly urban infrastructure.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>CarbonCycle</h3>
-                        <p>Carbon reduction and recycling solutions.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>GreenEnergy</h3>
-                        <p>Renewable energy innovations.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>EarthSense</h3>
-                        <p>IoT for environmental monitoring.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>WaterWise</h3>
-                        <p>Solutions for sustainable water use.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 3: Consumer & Lifestyle -->
-            <div class="carousel-item">
-                <div class="d-flex justify-content-around">
-                    <div class="portfolio-company">
-                        <h3>ShopSmart</h3>
-                        <p>AI-driven e-commerce platform.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>LifeWell</h3>
-                        <p>Health and wellness mobile app.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>EcoGoods</h3>
-                        <p>Sustainable consumer goods marketplace.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>MindSpace</h3>
-                        <p>Mental wellness app for youth.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>StyleFit</h3>
-                        <p>AR-based fashion recommendations.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 4: Deep Tech -->
-            <div class="carousel-item">
-                <div class="d-flex justify-content-around">
-                    <div class="portfolio-company">
-                        <h3>DataBrain</h3>
-                        <p>AI research and development.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>QuantumLeap</h3>
-                        <p>Quantum computing for enterprise solutions.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>NeuroLink</h3>
-                        <p>Brain-machine interface development.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>DeepVision</h3>
-                        <p>Computer vision for automation.</p>
-                    </div>
-                    <div class="portfolio-company">
-                        <h3>SecureAI</h3>
-                        <p>AI-based cybersecurity.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
+    <!-- Filter Buttons -->
+    <div class="category-buttons">
+        <button class="category-button active" data-category="agriculture">Agriculture & Food</button>
+        <button class="category-button" data-category="climate">Climate & Sustainability</button>
+        <button class="category-button" data-category="consumer">Consumer & Lifestyle</button>
+        <button class="category-button" data-category="deep-tech">Deep Tech</button>
     </div>
 </section>
+
+
 
 
 <!-- FAQ Section -->
