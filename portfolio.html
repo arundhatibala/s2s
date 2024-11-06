@@ -7,8 +7,8 @@
             <title>Document</title>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-            <link rel="stylesheet" href="css/global.css">
             <link rel="stylesheet" href="index.css">
+            <link rel="stylesheet" href="css/global.css">
             <link rel="stylesheet" href="css/portfolio.css">
         </head>
     <body>
@@ -22,9 +22,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#about">ABOUT</a>
+                        <a class="nav-link" href="/">ABOUT</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item-active">
                         <a class="nav-link" href="#portfolio">PORTFOLIO <span class="arrow"></span></a>
                     </li>
                     <li class="nav-item">
@@ -41,18 +41,19 @@
         </nav>
 
     <!-- Intro Section -->
-<section class="intro-section">
-    <div class="intro-content">
-        <h1>THE NEW<br>SILICON VALLEY<span class="pink-dot">.</span></h1>
-        <p>For over a decade, Switzerland has led global innovation, driving technology breakthroughs. At S2S Ventures, we’re not just observing—we’re students in the very labs, scouting the startups building these technologies and the early adopters bringing them to market. We are uniquely positioned to make bold bets on the future in an environment rich with talent.</p>
-        <button class="btn-secondary">Join our investor network</button>
-    </div>
-    <div class="intro-images">
-        <img src="media/image1.jpg" alt="Image 1">
-        <img src="media/image2.jpg" alt="Image 2">
-        <img src="media/image3.jpg" alt="Image 3">
-    </div>
- </section>   
+    <section class="intro-section">
+        <div class="intro-images">
+            <div class="image-container container-1">
+                <img src="../media/portfolio.png" alt="Image 1" class="intro-image">
+            </div>
+        </div>
+        <div class="intro-content">
+            <h1>THE NEW<br>SILICON VALLEY<span class="pink-dot">.</span></h1>
+            <p>For over a decade, Switzerland has led global innovation, driving technology breakthroughs. At S2S Ventures, we’re not just observing—we’re students in the very labs, scouting the startups building these technologies and the early adopters bringing them to market. We are uniquely positioned to make bold bets on the future in an environment rich with talent.</p>
+            <button class="btn-secondary">Join our investor network</button>
+        </div>
+    </section>
+    
 
     <!-- Testimonial Section -->
 <section class="testimonial-section">
@@ -77,42 +78,133 @@
         We’re often the first to back a startup, with our CHF 25,000 check helping founders take their first steps—whether it’s registering their company, building a prototype, or launching a product. But our commitment goes beyond the initial investment. We help our portfolio startups raise their pre-seed rounds, leveraging our network of business angels and institutional investors for warm introductions. No matter the challenges, we stand by our startups, and give them the support they need to succeed.
     </p>
 
-    <div class="btn-secondarys">
+    <div class="btns">
         <button class="btn-primary">Apply for funding</button>
-        <button class="btn-secondary">Application FAQ</button>
+        <button class="btn-secondary-light">Application FAQ</button>
     </div>
 </section>
 
-<!-- Portfolio Section -->
-<section class="portfolio-section">
+<section class="portfolio-section" style="height: 80vh;">
     <h1>MEET OUR PORTFOLIO<span class="pink-dot">.</span></h1>
-    
-    <div class="btn-secondarys">
-        <button class="btn-secondary active">Agriculture & Food</button>
-        <button class="btn-secondary">Climate & Sustainability</button>
-        <button class="btn-secondary">Consumer & Lifestyle</button>
-        <button class="btn-secondary">Deep Tech</button>
+
+    <!-- Category Buttons -->
+    <div class="btn-secondarys text-center mb-4">
+        <button class="btn-secondary btn-active" data-slide="0">Agriculture & Food</button>
+        <button class="btn-secondary" data-slide="1">Climate & Sustainability</button>
+        <button class="btn-secondary" data-slide="2">Consumer & Lifestyle</button>
+        <button class="btn-secondary" data-slide="3">Deep Tech</button>
     </div>
 
-    <div class="portfolio-items">
-        <div class="portfolio-item">
-            <h2>Hoshi <span class="linkedin-icon">in</span></h2>
-            <p>Hoshi builds AI agents to put wholesaler workflows on autopilot.</p>
-        </div>
-        <div class="portfolio-item">
-            <h2>askEarth <span class="linkedin-icon">in</span></h2>
-            <p>...</p>
-        </div>
-        <div class="portfolio-item">
-            <h2>Catchfree <span class="linkedin-icon">in</span></h2>
-            <p>Catchfree produces plant-based alternatives to seafood.</p>
-        </div>
-        <div class="portfolio-item">
-            <h2>Ailegis <span class="linkedin-icon">in</span></h2>
-            <p>Ailegis automates legal document drafting using AI.</p>
+    <!-- Bootstrap Carousel for Portfolio Companies -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide">
+        <div class="carousel-inner">
+            <!-- Slide 1: Agriculture & Food -->
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-around">
+                    <div class="portfolio-company">
+                        <h3>FarmTech</h3>
+                        <p>Innovating sustainable farming solutions.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>AgroGen</h3>
+                        <p>Advanced genetic research in agriculture.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>GreenHarvest</h3>
+                        <p>Empowering farmers with AI tools.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>CropCare</h3>
+                        <p>Organic pest control solutions.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>FreshYield</h3>
+                        <p>Blockchain solutions for food supply chains.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Climate & Sustainability -->
+            <div class="carousel-item">
+                <div class="d-flex justify-content-around">
+                    <div class="portfolio-company">
+                        <h3>EcoWorks</h3>
+                        <p>Building eco-friendly urban infrastructure.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>CarbonCycle</h3>
+                        <p>Carbon reduction and recycling solutions.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>GreenEnergy</h3>
+                        <p>Renewable energy innovations.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>EarthSense</h3>
+                        <p>IoT for environmental monitoring.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>WaterWise</h3>
+                        <p>Solutions for sustainable water use.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Consumer & Lifestyle -->
+            <div class="carousel-item">
+                <div class="d-flex justify-content-around">
+                    <div class="portfolio-company">
+                        <h3>ShopSmart</h3>
+                        <p>AI-driven e-commerce platform.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>LifeWell</h3>
+                        <p>Health and wellness mobile app.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>EcoGoods</h3>
+                        <p>Sustainable consumer goods marketplace.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>MindSpace</h3>
+                        <p>Mental wellness app for youth.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>StyleFit</h3>
+                        <p>AR-based fashion recommendations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Deep Tech -->
+            <div class="carousel-item">
+                <div class="d-flex justify-content-around">
+                    <div class="portfolio-company">
+                        <h3>DataBrain</h3>
+                        <p>AI research and development.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>QuantumLeap</h3>
+                        <p>Quantum computing for enterprise solutions.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>NeuroLink</h3>
+                        <p>Brain-machine interface development.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>DeepVision</h3>
+                        <p>Computer vision for automation.</p>
+                    </div>
+                    <div class="portfolio-company">
+                        <h3>SecureAI</h3>
+                        <p>AI-based cybersecurity.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
 
 <!-- FAQ Section -->
 <section class="faq-section">
@@ -124,26 +216,25 @@
 
     <div class="faq-grid">
         <div class="faq-item">
-            <h2>HOW DOES THE S2S FUNDING APPLICATION PROCESS LOOK LIKE?<span class="question-mark">?</span></h2>
+            <h2>HOW DOES THE S2S FUNDING APPLICATION PROCESS LOOK LIKE<span class="question-mark">?</span></h2>
             <p>We begin with a casual call to get to know each other. If the timing is right to consider an investment, you'll pitch your startup. We then conduct due diligence and talk to experts. Finally, you’ll present to our board for a final vote. The entire process takes ~4 weeks.</p>
         </div>
         <div class="faq-item">
-            <h2>WHAT HAPPENS IF S2S DECIDES TO INVEST?<span class="question-mark">?</span></h2>
+            <h2>WHAT HAPPENS IF S2S DECIDES TO INVEST<span class="question-mark">?</span></h2>
             <p>You choose between one of our two <a href="#">term sheets</a>. Our terms are industry standard and founder friendly. After we signed the convertible loan, it takes ~2 weeks for the money to arrive in your account. We expect <a href="#">quarterly reports</a>.</p>
         </div>
         <div class="faq-item">
-            <h2>WHAT MAKES S2S DIFFERENT FROM OTHER FUNDS?<span class="question-mark">?</span></h2>
+            <h2>WHAT MAKES S2S DIFFERENT FROM OTHER FUNDS<span class="question-mark">?</span></h2>
             <p>We are fully independent, not a feeder fund. There’s no parent fund to signal red flags by passing on follow-on investments. However, we ensure you still appear in their deal flow.</p>
         </div>
     </div>
 
-    <button class="btn-secondary">Email us your questions</button>
+    <button class="btn-secondary-light">Email us your questions</button>
 </section>
-
     <!-- Footer Section -->
     <div class="footer">
         <div class="footer-left">
-            <img src="media/s2s logo.svg" alt="Logo" class="logo">
+            <img src="media/logo-dark.svg" alt="Logo" class="logo">
             <p>© 2024 All Rights Reserved | S2S Ventures AG</p>
         </div>
         <div class="footer-right">
@@ -154,10 +245,12 @@
             <a href="#" class="footer-link">EMAIL</a>
         </div>
     </div>
+
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/header.js"></script>
 
     <script>
         window.addEventListener('scroll', function() {

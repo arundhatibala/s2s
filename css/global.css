@@ -19,19 +19,16 @@ body {
 }
 
 .navbar {
-    position: fixed; /* Fix the navbar at the top of the viewport */
-    top: 0; /* Position it at the top */
-    left: 0; /* Align it to the left */
-    width: 100%; /* Make it full width */
+    position: sticky; /* Fix the navbar at the top of the viewport */ 
     z-index: 1000; /* Ensure it's above other elements */
-    background-color: transparent; /* Optional: keep it transparent */
+    background-color: var(--neon-blue); /* Optional: keep it transparent */
     transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
 
 
 .navbar.scrolled {
     background-color: rgba(35, 35, 255, 0.3); /* Semi-transparent blue background */
-    backdrop-filter: blur(10px); /* Glass effect */
+    backdrop-filter: blur(20px); /* Glass effect */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
 }
 
@@ -46,7 +43,7 @@ body {
 }
 
 /* Underline effect only for desktop screens and larger */
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
     .navbar-nav .nav-link::after {
         content: '';
         position: absolute;
@@ -61,6 +58,18 @@ body {
 
     .navbar-nav .nav-link:hover::after {
         transform: scaleX(1); /* Show underline on hover */
+    }
+
+    .navbar-nav .nav-item-active .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px; /* Position the underline below the text */
+        height: 3px; /* Thickness of the underline */
+        width: 99%;
+        background-color: var(--neon-pink); /* Underline color */
+        transform: scaleX(1); 
+        /* transition: transform 0.3s; */
     }
 }
 
@@ -117,6 +126,20 @@ a.nav-link {
 
 .dot {
     color: #FF007F; /* Neon pink for the dot */
+}
+
+
+/* scroll styles */
+.scroll-icon {
+    position: absolute;
+    width: 50px; /* Adjust based on vector size */
+    height: 50px;
+    top: 60%;
+    left: 32%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1;
+    background-image: url('../media/scroll.png'); /* Path to scroll vector */
 }
 
 /* Hexagon styles */
@@ -255,8 +278,26 @@ a.nav-link {
     transition: background-color 0.3s, color 0.3s;
     cursor: url('../media/arrow-left.svg'), auto; /* Custom cursor */
 }
+/* Secondary Button Styles */
+.btn-secondary-light {
+    background-color: transparent;
+    color: white;
+    border: 2px solid var(--neon-pink);
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: url('../media/arrow-left.svg'), auto; /* Custom cursor */
+}
 
 .btn-secondary:hover {
+    background-color: var(--neon-pink);
+    color: white;
+    border: 2px solid var(--neon-pink);
+}
+
+.btn-secondary-light:hover {
     background-color: var(--neon-pink);
     color: white;
     border: 2px solid var(--neon-pink);
