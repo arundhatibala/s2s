@@ -27,6 +27,23 @@ document.addEventListener('scroll', () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".category-button");
+    const slides = document.querySelectorAll(".portfolio-slide");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            // Remove active class from all buttons and slides
+            buttons.forEach(btn => btn.classList.remove("active"));
+            slides.forEach(slide => slide.classList.remove("active"));
+
+            // Add active class to the clicked button and corresponding slide
+            button.classList.add("active");
+            const category = button.getAttribute("data-category");
+            document.querySelector(`.portfolio-slide[data-category="${category}"]`).classList.add("active");
+        });
+    });
+});
 
 
 
