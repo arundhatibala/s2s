@@ -1,9 +1,13 @@
 window.addEventListener('scroll', function() {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 50) { // Adjust the value to your preference
+    const header = document.querySelector('.navbar');
+    const logo = document.querySelector('.navbar-brand img');
+
+    if (window.scrollY > 50) { // Adjust scroll threshold if needed
         header.classList.add('scrolled');
+        logo.classList.add('logo-hidden');
     } else {
         header.classList.remove('scrolled');
+        logo.classList.remove('logo-hidden');
     }
 });
 

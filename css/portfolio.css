@@ -15,8 +15,9 @@
 
 
 .navbar.scrolled {
-    background-color: rgba(210, 210, 255, 0.7); /* Semi-transparent blue background */
+    background-color: rgba(210, 210, 255, 0.1); /* Semi-transparent blue background */
     backdrop-filter: blur(30px); /* Glass effect */
+    -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
 }
 
