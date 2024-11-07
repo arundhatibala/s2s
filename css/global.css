@@ -406,3 +406,11 @@ a.nav-link {
     text-transform: uppercase; /* All caps */
     margin-bottom: 20px;
 }
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
