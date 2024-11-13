@@ -191,16 +191,20 @@ div.scroll-icon {
     /* Footer */
     .footer {
         flex-direction: column;
-        text-align: center;
+        padding: 0;
     }
 
-    .footer-left, .footer-right {
-        align-items: center;
+    .footer-left, {
+        align-items: left;
+    }
+
+    .footer-right {
+        align-items: right;
     }
 
     .footer-link {
-        padding-right: 0;
-    }
+       margin-right: 0;
+        }
 }
 
 

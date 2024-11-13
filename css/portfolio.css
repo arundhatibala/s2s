@@ -42,11 +42,10 @@
 /* Intro Section */
 .intro-section {
     height: 100vh;
-    padding-top: 100px;
+    /* padding-top: 100px; */
     display: flex;
     flex-direction: row; /* Default to side-by-side layout */
-    /* padding: 60px 40px; */
-    /* gap: 40px; */
+    gap: 40px;
     align-items: center;
 }
 
@@ -71,16 +70,22 @@
     font-size: 1rem;
     line-height: 1.6;
     align-content: left;
-    /* margin: 20px 0; */
+    margin: 20px 0;
     color: #000040;
 }
 
-.intro-image {
-    /* max-width: 50%; */
+.image-container {
+    width: 60%;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../media/portfolio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 /* Stack vertically on smaller screens */
 @media (max-width: 768px) {
@@ -136,9 +141,25 @@
     padding: 20px;
     text-align: left;
 }
+.faq-box {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    padding: 20px;
+    text-align: left;
+    height: 500px;
+}
+
+.faq-text {
+    font-weight: bold; 
+    font-size: 2rem; 
+    line-height: 100%;
+    color: #ffffff;
+    height: 50%;
+    font-style: italic;
+}
 
 .testimonial-text {
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
     font-size: 1.5rem;
     color: #fff;
     margin-bottom: 20px;
@@ -163,6 +184,14 @@
     text-align: left;
     max-width: 100%;
     margin: 20px auto 40px;
+}
+
+/* Description Paragraph */
+.faq-description {
+    /* padding-top: 40px; */
+    font-size: 1rem;
+    text-align: left;
+    /* min-height: 60%; */
 }
 
 .btns button.btn-primary {
@@ -243,12 +272,13 @@
     color: #ffffff;
     background-color: var(--neon-blue);
 }
-
+/* 
 .faq-section h1 {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
-}
+    color: #ffffff;
+} */
 
 .pink-dot {
     color: #ff007f;
@@ -306,7 +336,6 @@
 
 /* Testimonial Section */
 .testimonial-section {
-    padding: 40px;
     text-align: center;
     color: #ffffff;
     background-color: var(--neon-blue);
@@ -338,10 +367,8 @@
 }
 
 .testimonial-text {
-    padding-bottom: 50px;
     font-size: 1.5rem;
     color: #fff;
-    margin-bottom: 20px;
     font-style: italic;
 }
 
@@ -408,30 +435,8 @@
 .category-buttons {
     display: flex;
     justify-content: left;
-    gap: 15px;
+    gap: 25px;
     margin-bottom: 40px;
-}
-
-.category-button {
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 1rem;
-    border: 2px solid #ff007f;
-    background-color: transparent;
-    color: #000040;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.category-button.active {
-    background-color: #ff007f;
-    color: #ffffff;
-}
-
-.category-button:hover {
-    background-color: #ff007f;
-    color: #ffffff;
 }
 
 /* Portfolio Items */
@@ -509,3 +514,54 @@
 .portfolio-slider .row {
     padding: 20px;
 }
+
+.btns button.btn-primary {
+    margin-right: 30px;
+    background-color: white;
+    color: var(--neon-blue);
+    border: 2px solid white;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: url('../media/arrow-left.svg'), auto; /* Custom cursor */
+}
+
+
+.slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+.slide {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.slide.active {
+    opacity: 1;
+    position: relative;
+}
+.startup {
+    text-align: left;
+    padding: 10px;
+    display: inline-block;
+    margin: 0 20px;
+    max-width: 200px;
+}
+.startup h2 {
+    color: #2A2A2A;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.linkedin-icon {
+    color: #0A66C2;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+

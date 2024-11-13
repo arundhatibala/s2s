@@ -1,119 +1,133 @@
+/* Import fonts and icons */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* Define root colors */
 :root {
     --neon-blue: #2323FF;
     --neon-pink: #FF007F;
+    --dark-blue: #000040;
+    --light-background: #f6f6f6;
+    --dark-background: #333333;
+    --light-button: #ffffff;
+    --dark-button: #232323;
 }
 
+/* General reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url('../media/arrow-left.svg'), auto; /* Custom cursor */
+    /* cursor: url('../media/arrow-left.svg'), auto; Custom cursor */
 }
 
+/* Body styling */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f6f6f6;
+    background-color: var(--light-background);
 }
 
+/* Navbar styling */
 .navbar {
-    position: sticky; /* Fix the navbar at the top of the viewport */ 
-    z-index: 1000; /* Ensure it's above other elements */
-    background-color: var(--neon-blue); /* Optional: keep it transparent */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+    padding: 20px 20px 20px 20px;
+    position: sticky;
+    z-index: 1000;
+    background-color: var(--neon-blue);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
-
 
 .navbar.scrolled {
-    background-color: rgba(35, 35, 255, 0.1); /* Semi-transparent blue background */
-    backdrop-filter: blur(20px); /* Glass effect */
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    background-color: rgba(35, 35, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Navbar links */
 .navbar-nav .nav-link {
-    color: #fff !important; /* Ensure link color is white */
-    position: relative; /* Position for the pseudo-element */
-    transition: transform 0.3s, color 0.2s; /* Transition for smoothness */
+    color: #fff !important;
+    position: relative;
+    transition: transform 0.3s, color 0.2s;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #fff !important; /* Keep text white on hover */
+    color: #fff !important;
 }
 
-/* Underline effect only for desktop screens and larger */
-@media (min-width: 1000px) {
-    .navbar-nav .nav-link::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -5px; /* Position the underline below the text */
-        height: 3px; /* Thickness of the underline */
-        width: 99%;
-        background-color: var(--neon-pink); /* Underline color */
-        transform: scaleX(0); 
-        transition: transform 0.3s;
-    }
-
-    .navbar-nav .nav-link:hover::after {
-        transform: scaleX(1); /* Show underline on hover */
-    }
-
-    .navbar-nav .nav-item-active .nav-link::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -5px; /* Position the underline below the text */
-        height: 3px; /* Thickness of the underline */
-        width: 99%;
-        background-color: var(--neon-pink); /* Underline color */
-        transform: scaleX(1); 
-        /* transition: transform 0.3s; */
-    }
+/* Navbar underline effect */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 3px;
+    width: 99%;
+    background-color: var(--neon-pink);
+    transform: scaleX(0);
+    transition: transform 0.3s;
 }
 
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-nav .nav-item-active .nav-link::after {
+    transform: scaleX(1);
+}
+
+/* Navbar toggler styling */
 .navbar-toggler {
-    border: none; /* Remove border */
+    border: none;
 }
 
+/* Navbar link and item styling */
 a.nav-link {
-    font-size: 15px; /* Font size */
-    font-weight: 600; /* Font weight */
-    color: #fff !important; /* Ensure link color is white */
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff !important;
 }
 
 .nav-item {
-    margin-right: 10px; /* Space between items */
+    margin-right: 10px;
 }
 
+/* Hamburger icon */
 .hamburger-icon {
-    color: #fff; /* Color of the hamburger icon */
-    font-size: 24px; /* Size of the icon */
+    color: #fff;
+    font-size: 24px;
 }
 
-/* Add arrow icon for the last two items */
+.logo-hidden {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* Arrow icon for last two navbar items */
 .navbar-nav .nav-item:last-child .nav-link .arrow,
 .navbar-nav .nav-item:nth-last-child(2) .nav-link .arrow {
     display: inline-block;
     width: 12px;
     height: 12px;
-    background-image: url('../media/arrow-right.svg'); /* Arrow icon path */
+    background-image: url('../media/arrow-right.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-left: 2px; /* Space between text and arrow */
+    margin-left: 2px;
     vertical-align: middle;
 }
 
+.container {
+    max-width: 80%;
+}
+
+/* Hero section styling */
 
 .hero {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #2323FF; /* Neon blue */
+    height: 90vh;
+    background-color: var(--neon-blue);
     color: white;
     text-align: center;
     overflow: hidden;
@@ -121,127 +135,116 @@ a.nav-link {
 
 .hero-content h1 {
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 800;
     line-height: 1.2;
+    text-transform: uppercase;
 }
 
 .dot {
-    color: #FF007F; /* Neon pink for the dot */
+    color: var(--neon-pink);
 }
 
-
-/* scroll styles */
-.scroll-icon {
+/* Scroll and hexagon styling */
+.scroll-icon, .hexagon {
     position: absolute;
-    width: 50px; /* Adjust based on vector size */
-    height: 50px;
-    top: 60%;
-    left: 32%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 1;
-    background-image: url('../media/scroll.png'); /* Path to scroll vector */
-}
-
-/* Hexagon styles */
-.hexagon {
-    position: absolute;
-    width: 40vw; /* Adjust based on vector size */
-    height: 40vw;
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.7;
 }
 
-.hexagon-1 {
-    background-image: url('../media/hexagon.png'); /* Path to hexagon vector */
+.scroll-icon {
+    width: 50px;
+    height: 50px;
     top: 60%;
     left: 32%;
-    /* transform: translate(-50%, -50%); */
+    background-image: url('../media/scroll.png');
+}
+
+.hexagon-1, .hexagon-2 {
+    width: 40vw;
+    height: 40vw;
+    background-image: url('../media/hexagon.png');
+}
+
+.hexagon-1 {
+    top: 60%;
+    left: 32%;
 }
 
 .hexagon-2 {
-    background-image: url('../media/hexagon.png'); /* Path to hexagon vector */
     top: 65%;
     left: 35%;
-    /* transform: translate(-50%, -50%) rotate(20deg); */
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    line-height: 1.2;
-    text-transform: uppercase; /* Makes text all uppercase */
-}
-
-
-/* Responsive text size */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-}
-
+/* Main title styling */
 .main-title {
-    font-size: 2.5rem;
-    padding-top: 15vh;
-    font-weight: 700;
+    font-size: 3rem;
+    padding-top: 5vh;
+    font-weight: 800;
     text-align: left;
-    color: #000040; /* Dark blue */
-    text-transform: uppercase; /* All caps */
-    margin-bottom: 20px;
-}
-
-.main-title .dot {
-    color: #FF007F; /* Neon pink for dot */
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    margin-bottom: 50px;
 }
 
 .main-description {
     font-size: 1rem;
-    color: #333333; /* Dark grey for readability */
-    line-height: 1.6; /* Improved readability */
+    color: #333333;
+    margin-bottom: 30px;
+    margin-top: 30px;
     text-align: left;
-
 }
 
-.container {
-    max-width: 80vw; /* Max width of the container */
-    padding: 40px;
-}
-
-:root {
-    --neon-blue: #2323FF;
-    --neon-pink: #FF007F;
-    --dark-blue: #000040;
-}
-
-/* Card Section */
-.card-section {
-    background-color: #f6f6f6;
-    padding: 40px 0;
-}
-
-.custom-card {
-    border: 1px solid var(--dark-blue); /* Dark border color */
-    background-color: transparent; /* Set background color to transparent */
-    padding: 30px;
+.description {
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 100px;
+    /* margin-top: 100px; */
     text-align: left;
-    height: 500px;
-    border-radius: 0; /* Remove border radius */
-    box-shadow: none; /* Remove shadow for a flat look */
 }
 
-/* Card Title */
-.card-title {
-    font-size: 1.25rem;
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 40px 0;
+}
+
+.hero-h2 {
+    font-size: 2rem;
     font-weight: 700;
     color: var(--dark-blue);
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
-/* Card Text */
+
+.custom-card {
+    /* border: 1px solid var(--dark-blue);
+    background-color: transparent;
+    padding: 30px;
+    text-align: left;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: none;
+    border-radius: 0; */
+    margin: 20px;
+    background-color: transparent;
+    border: 1px solid var(--dark-blue);
+    padding: 20px;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
 .card-text {
     padding-top: 30%;
     font-size: 1rem;
@@ -249,78 +252,88 @@ a.nav-link {
     margin-bottom: 20px;
 }
 
-/* Primary Button Styles */
+.testimonial-box {
+    display:flex;   
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.buttons-hero-box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* padding-top: 100px; */
+}
+
+/* Button styles for light and dark mode */
+.btn-primary, .btn-secondary, .btn-secondary-light, .btn-light-mode, .btn-dark-mode {
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    /* text-transform: capitalize; */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    /* cursor: url('../media/arrow-left.svg'), auto; */
+}
+
+/* Light Mode Button */
+.btn-light-mode {
+    background-color: var(--light-button);
+    color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
+}
+
+.btn-light-mode:hover {
+    transform: scale(1.05);
+    background-color: var(--dark-blue);
+    color: var(--light-button);
+}
+
+/* Dark Mode Button */
+.btn-dark-mode {
+    background-color: var(--dark-button);
+    color: var(--light-button);
+    border: 2px solid var(--light-button);
+}
+
+.btn-dark-mode:hover {
+    transform: scale(1.05);
+    background-color: var(--light-button);
+    color: var(--dark-button);
+}
+
 .btn-primary {
     background-color: var(--neon-blue);
     color: white;
     border: 2px solid var(--neon-blue);
-    font-weight: 600;
-    border-radius: 30px;
-    padding: 10px 20px;
-    text-transform: capitalize;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: url('../media/arrow-left.svg'), auto; /* Custom cursor */
 }
 
 .btn-primary:hover {
+    transform: scale(1.05);
     background-color: #f6f6f6;
     color: var(--neon-blue);
 }
 
-/* Secondary Button Styles */
-.btn-secondary {
+.btn-secondary, .btn-secondary-light {
     background-color: transparent;
+    border: 2px solid var(--neon-pink);
     color: var(--neon-pink);
-    border: 2px solid var(--neon-pink);
-    font-weight: 600;
-    border-radius: 30px;
-    padding: 10px 20px;
-    text-transform: capitalize;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: url('../media/arrow-left.svg'), auto; /* Custom cursor */
-}
-/* Secondary Button Styles */
-.btn-secondary-light {
-    background-color: transparent;
-    color: white;
-    border: 2px solid var(--neon-pink);
-    font-weight: 600;
-    border-radius: 30px;
-    padding: 10px 20px;
-    text-transform: capitalize;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: url('../media/arrow-left.svg'), auto; /* Custom cursor */
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover, .btn-secondary-light:hover {
+    transform: scale(1.05);
     background-color: var(--neon-pink);
     color: white;
-    border: 2px solid var(--neon-pink);
 }
 
-.btn-secondary-light:hover {
-    background-color: var(--neon-pink);
-    color: white;
-    border: 2px solid var(--neon-pink);
-}
-
-/* Remove grid gap */
-.row.no-gutters {
-    margin-right: 0;
-    margin-left: 0;
-}
-
-.row.no-gutters > [class*='col-'] {
-    padding-right: 0;
-    padding-left: 0;
-}
-
+/* Footer styling */
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 20px 40px;
-    background-color: #000040;
+    background-color: var(--dark-blue);
     color: #ffffff;
 }
 
@@ -374,51 +387,102 @@ a.nav-link {
 }
 
 .footer-link:hover {
-    color: #ff007f; /* Pink color on hover */
-    text-decoration: none;
-    transition: color 0.3s /* Smooth transition */
+    color: var(--neon-pink);
+    transition: color 0.3s;
 }
 
-.custom-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* Responsive styles - Media Queries */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .footer {
+        padding: 20px;
+    }
 }
 
-.custom-card .btn-primary {
-    width: fit-content;
+@media (min-width: 1000px) {
+    .navbar-nav .nav-link::after {
+        transform: scaleX(0);
+    }
 }
 
-.custom-card .btn-secondary {
-    width: fit-content;
-}
-
-.custom-card {
-    margin-bottom: 100px;
-}
+/* Removed unnecessary grid gap styles and moved media queries to the end */
 
 
-.main-title {
-    font-size: 3rem;
-    padding-top: 5vh;
-    font-weight: 800;
-    text-align: left;
-    color: #000040; /* Dark blue */
-    text-transform: uppercase; /* All caps */
-    margin-bottom: 20px;
-}
 
-.card-title {
-    font-size: 2rem;
-    font-weight: 700;
+/* Testimonial Section */
+.testimonial-section {
+    /* padding: 40px; */
+    text-align: center;
     color: var(--dark-blue);
-    text-transform: uppercase;
+    background-color: #f6f6f6;
+}
+
+.testimonial-section h1 {
+    padding-bottom: 50px;
+    padding-top: 20px;
+    font-size: 2.5rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 0;
+}
+
+.testimonial-box {
+    background-color: transparent;
+    border: 1px solid var(--dark-blue);
+    padding: 20px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.testimonial-text {
+    padding-bottom: 50px;
+    font-size: 1.5rem;
+    color: var(--dark-blue);
     margin-bottom: 20px;
+    font-style: italic;
 }
 
-/* Class for making the logo disappear */
-.logo-hidden {
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Smooth transition for fade-out */
-}
 
+/* Thin banner wrapper */
+.banner-wrapper {
+    overflow: hidden;
+    background-color: #0074d9; /* Background color */
+    color: #fff; /* Text color */
+    height: 40px; /* Set banner height to 50px */
+    /* position: fixed; Fixed at the top of the page */
+    bottom: 0;
+    width: 100%; /* Full width across the page */
+    display: flex;
+    align-items: center; /* Center the text vertically */
+    font-size: 16px;
+    z-index: 100000000; /* Keep it on top of other elements */
+    white-space: nowrap;
+  }
+  
+  /* Banner content that scrolls */
+  .banner {
+    display: inline-block;
+    padding-left: 100%; /* Start the banner text off-screen */
+    animation: scroll 5s linear infinite;
+    padding: 5px;
+
+  }
+  
+  /* Scroll animation */
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  

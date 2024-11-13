@@ -1,0 +1,71 @@
+/* Outer Cursor Circle */
+:root {
+    --color-bg: #fff;
+    --color-text: #000;
+    --highlight: FF007F; 
+  }
+  
+  .light-mode {
+    --color-bg: #fff;
+    --color-text: #000;
+    --highlight: var(--neon-pink); 
+  }
+  
+  .dark-mode {
+    --color-bg: #171717;
+    --color-text: #EDEDED;
+    --highlight: var(--neon-blue);
+  }
+
+  * {
+    cursor: none;
+  }
+  
+  .cursor--outer {
+    z-index: 10000;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid var(--highlight);
+      background-color: #ff008061;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      position: fixed;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+    
+    /* Inner Cursor Circle */
+    .cursor--inner {
+      z-index: 20000;
+      width: 4px;
+      height: 4px;
+      position: fixed;
+      left: 10px;
+      top: 10px;
+      border-radius: 50%;
+      z-index: 11000;
+      background:var(--highlight);
+      display: none;
+    }
+    
+    .link {
+      cursor: none; 
+      transition: coloring 10s ease-in-out;
+    }
+  
+    /* Hide the custom cursor on mobile devices */
+  @media (max-width: 767px) {
+    .cursor--outer, .cursor--inner {
+      display: none;
+    }
+  
+    /* Disable the default pointer cursor on links */
+    a, .link {
+      cursor: default !important;
+    }
+  }
