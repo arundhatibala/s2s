@@ -18,7 +18,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* cursor: url('../media/arrow-left.svg'), auto; Custom cursor */
+    cursor: none;
 }
 
 /* Body styling */
@@ -193,6 +193,7 @@ a.nav-link {
     margin-bottom: 30px;
     margin-top: 30px;
     text-align: left;
+    line-height: 120%;
 }
 
 .description {
@@ -273,7 +274,7 @@ a.nav-link {
     margin-top: 10px;
     /* text-transform: capitalize; */
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
-    /* cursor: url('../media/arrow-left.svg'), auto; */
+    cursor: none;
 }
 
 /* Light Mode Button */
@@ -281,12 +282,15 @@ a.nav-link {
     background-color: var(--light-button);
     color: var(--dark-blue);
     border: 2px solid var(--dark-blue);
+    cursor: none;
 }
 
 .btn-light-mode:hover {
     transform: scale(1.05);
     background-color: var(--dark-blue);
     color: var(--light-button);
+    z-index: 0;
+    cursor: none;
 }
 
 /* Dark Mode Button */
@@ -294,18 +298,21 @@ a.nav-link {
     background-color: var(--dark-button);
     color: var(--light-button);
     border: 2px solid var(--light-button);
+    cursor: none;
 }
 
 .btn-dark-mode:hover {
     transform: scale(1.05);
     background-color: var(--light-button);
     color: var(--dark-button);
+    cursor: none;
 }
 
 .btn-primary {
     background-color: var(--neon-blue);
     color: white;
     border: 2px solid var(--neon-blue);
+    cursor: none;
 }
 
 .btn-primary:hover {

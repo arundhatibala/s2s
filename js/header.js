@@ -31,25 +31,6 @@ document.addEventListener('scroll', () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".category-button");
-    const slides = document.querySelectorAll(".portfolio-slide");
-
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-            // Remove active class from all buttons and slides
-            buttons.forEach(btn => btn.classList.remove("active"));
-            slides.forEach(slide => slide.classList.remove("active"));
-
-            // Add active class to the clicked button and corresponding slide
-            button.classList.add("active");
-            const category = button.getAttribute("data-category");
-            document.querySelector(`.portfolio-slide[data-category="${category}"]`).classList.add("active");
-        });
-    });
-});
-
-
 // set the starting position of the cursor outside of the screen
 var clientX = -300,
     clientY = -300
@@ -114,6 +95,83 @@ function growOnHover() {
 
 growOnHover();
 
+
+// Array to keep track of active categories
+let activeCategories = [];
+
+// Function to toggle the active category
+function toggleCategory(button, category) {
+    console.log("Button clicked for category:", category);
+
+    const index = activeCategories.indexOf(category);
+
+    if (index > -1) {
+        // Remove category if already active
+        activeCategories.splice(index, 1);
+        button.classList.remove('active');
+        console.log("Category removed:", category);
+    } else {
+        // Add category if not active
+        activeCategories.push(category);
+        button.classList.add('active');
+        console.log("Category added:", category);
+    }
+
+    console.log("Active categories:", activeCategories);
+    filterProjects();
+}
+
+// Function to filter the projects based on the active categories
+function filterProjects() {
+    console.log("Filtering projects with active categories:", activeCategories);
+
+    const projects = document.querySelectorAll('.grid-item');
+    projects.forEach(project => {
+        // Get the categories of the project
+        const projectCategories = project.getAttribute('data-category').split(' ');
+
+        console.log("Project categories:", projectCategories);
+
+        // Show project if it matches all active categories
+        if (activeCategories.length === 0 || activeCategories.every(cat => projectCategories.includes(cat))) {
+            project.style.display = 'block';
+            const titleElement = project.querySelector('.card-title');
+            if (titleElement) {
+                console.log("Project shown:", titleElement.textContent);
+            } else {
+                console.log("Project shown: No card-title element found");
+            }
+        } else {
+            project.style.display = 'none';
+            const titleElement = project.querySelector('.card-title');
+            if (titleElement) {
+                console.log("Project hidden:", titleElement.textContent);
+            } else {
+                console.log("Project hidden: No card-title element found");
+            }
+        }
+    });
+}
+
+// Initial display of all items when the page loads
+window.addEventListener("DOMContentLoaded", () => {
+    filterProjects();
+});
+
+
+// Function to filter company items based on selected category
+function filterCategory(selectElement) {
+  const selectedCategory = selectElement.value;
+  const items = document.querySelectorAll('.company-item');
+
+  items.forEach(item => {
+      if (!selectedCategory || item.dataset.category === selectedCategory) {
+          item.style.display = 'block'; // Show item
+      } else {
+          item.style.display = 'none'; // Hide item
+      }
+  });
+}
 
 
 

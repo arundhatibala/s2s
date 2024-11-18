@@ -70,7 +70,7 @@
             <p class="testimonial-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.”</p>
             <p class="author"><strong>Name</strong><br>Founder & CEO, Riverkin</p>
         </div>
-        <div class="testimonial-box">
+        <div class="testimonial-box" style = "margin-right: 10px;">
             <p class="testimonial-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.”</p>
             <p class="author"><strong>Name</strong><br>Title, Startup</p>
         </div>
@@ -81,23 +81,148 @@
     </p>
 
     <div class="buttons-testimonial">
-        <button class="btn-primary">Apply for funding</button>
+        <button class="btn-primary-dark">Apply for funding</button>
         <button class="btn-secondary-light">Application FAQ</button>
     </div>
 </section>
 
+<!-- Company Grid Section -->
 <div class="portfolio-section">
     <h1>MEET OUR PORTFOLIO<span class="pink-dot">.</span></h1>
 
-    <!-- Filter Buttons -->
-    <div class="category-buttons">
-        <button class="btn-secondary-light active" data-category="agriculture">Agriculture & Food</button>
-        <button class="btn-secondary-light" data-category="climate">Climate & Sustainability</button>
-        <button class="btn-secondary-light" data-category="consumer">Consumer & Lifestyle</button>
-        <button class="btn-secondary-light" data-category="deep-tech">Deep Tech</button>
+    <!-- Category Filter Dropdown -->
+    <div class="dropdown-container">
+    <div class="dropdown container">
+        <select class="form-select" onchange="filterCategory(this)">
+            <option value="">All Categories</option>
+            <option value="agriculture">Agriculture & Food</option>
+            <option value="climate">Climate & Sustainability</option>
+            <option value="consumer">Consumer & Lifestyle</option>
+            <option value="deep-tech">Deep Tech</option>
+        </select>
     </div>
-    
+    </div>
+
+    <!-- Company Grid -->
+    <div class="company-grid">
+        <!-- Each item has a data-category attribute indicating its category -->
+        <div class="company-item" data-category="agriculture">
+            <h2>
+                Hoshi 
+                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </h2>
+            <p>Hoshi builds AI agents to automate wholesaler workflows.</p>
+        </div>
+        <div class="company-item" data-category="agriculture">
+            <h2>
+                askEarth 
+                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </h2>
+            <p>Focused on sustainable agricultural practices.</p>
+        </div>
+        <div class="company-item" data-category="agriculture">
+            <h2>
+                GreenFarm 
+                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </h2>
+            <p>Promotes eco-friendly farming techniques.</p>
+        </div>
+
+        <div class="company-item" data-category="climate">
+            <h2>
+                Catchfree 
+                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </h2>
+            <p>Produces plant-based alternatives to seafood.</p>
+        </div>
+        <div class="company-item" data-category="climate">
+            <h2>
+                EcoDrive 
+                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </h2>
+            <p>Reduces vehicle emissions with sustainable tech.</p>
+        </div>
+        <div class="company-item" data-category="climate">
+            <h2>
+                SolarGrid 
+                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </h2>
+            <p>Offers solar energy solutions for rural areas.</p>
+        </div>
+
+        <div class="company-item" data-category="consumer">
+            <h2>
+                LifestylePro 
+                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </h2>
+            <p>An app tailored to personalized lifestyle enhancements.</p>
+        </div>
+        <div class="company-item" data-category="consumer">
+            <h2>
+                WellNest 
+                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </h2>
+            <p>A wellness platform focusing on mental health.</p>
+        </div>
+        <div class="company-item" data-category="consumer">
+            <h2>
+                TrendyTech 
+                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </h2>
+            <p>Latest trends in wearable consumer electronics.</p>
+        </div>
+
+        <div class="company-item" data-category="deep-tech">
+            <h2>
+                Ailegis 
+                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </h2>
+            <p>Automates legal document drafting using AI.</p>
+        </div>
+        <div class="company-item" data-category="deep-tech">
+            <h2>
+                NeuroSync 
+                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </h2>
+            <p>Focuses on brain-computer interface tech.</p>
+        </div>
+        <div class="company-item" data-category="deep-tech">
+            <h2>
+                QuantumLeap 
+                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </h2>
+            <p>Develops advanced quantum computing solutions.</p>
+        </div>
+    </div>
 </div>
+
+
+
+
 
     <!-- Testimonial Section -->
     <section class="testimonial-section">
@@ -114,13 +239,13 @@
                 </p>
             </div>            
             <div class="faq-box">
-                <p class="faq-text" style = "font-weight: bold; font-size: 2rem; line-height: 100%;">WHAT MAKES S2S DIFFERENT FROM OTHER FUNDS<span class = "dot">?</span></p>
+                <p class="faq-text">WHAT MAKES S2S DIFFERENT FROM OTHER FUNDS<span class = "dot">?</span></p>
                 <p class = "faq-description" style = "color: #fff;">We are fully independent, not a feeder fund. There’s no parent fund to signal red flags by passing on follow-on investments. However, we ensure you still appear in their deal flow.</p>
             </div>
         </div>
     
         <div class="buttons-testimonial">
-            <button class="btn-primary">Email us your questions</button>
+            <button class="btn-primary-dark">Email us your questions</button>
         </div>
     </section>
 
@@ -143,8 +268,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/header.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="js/cursor.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>

@@ -26,8 +26,8 @@
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      border: 1px solid var(--highlight);
-      background-color: #ff008061;
+      border: 1px solid var(--neon-pink);
+      /* background-color: #ff008061; */
       z-index: 10000;
       display: flex;
       align-items: center;
@@ -66,6 +66,7 @@
   
     /* Disable the default pointer cursor on links */
     a, .link {
-      cursor: default !important;
+      cursor: none !important;
     }
   }
+
