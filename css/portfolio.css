@@ -596,3 +596,7 @@
 .category-dropdown select::-ms-expand {
     display: none;
 }
+
+.bi-linkedin {
+    color: white;
+}
