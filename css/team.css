@@ -94,5 +94,14 @@
 
 /* Hover effect for inactive buttons */
 .btn-toggle:not(.active):hover {
-    color: #ff007f;
+    color: var(--neon-pink);
 }
+
+
+.team-item[data-category="alumni"] {
+    display: none; /* Hide alumni team items by default */
+  }
+  
+  .team-item[data-category="current"] {
+    display: block; /* Show current team items by default */
+  }

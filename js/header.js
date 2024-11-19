@@ -177,7 +177,6 @@ function filterCategory(selectElement) {
   });
 }
 
-
 // Function to handle button click and filter team items
 function filterTeam(teamCategory) {
   // Handle toggle button active state
