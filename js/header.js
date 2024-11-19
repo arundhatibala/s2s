@@ -167,8 +167,12 @@ function filterCategory(selectElement) {
   items.forEach(item => {
       if (!selectedCategory || item.dataset.category === selectedCategory) {
           item.style.opacity = '1'; // Show item
+          item.style.visibility = 'visible'; // Ensure it's visible
+          item.style.pointerEvents = 'auto'; // Allow interaction
       } else {
-          item.style.opacity = '0.1'; // Hide item
+          item.style.opacity = '0.2'; // Dim item
+          item.style.visibility = 'visible'; // Keep it visible, but dimmed
+          item.style.pointerEvents = 'none'; // Disable interaction
       }
   });
 }
