@@ -12,7 +12,7 @@
 .team-member h2 {
     color: var(--neon-blue);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     display: flex;  /* Align title and icon in a row */
     align-items: center;  /* Vertically center the icon with the title */
     margin-bottom: 5px;  /* Small margin between title and description */
@@ -25,21 +25,14 @@
 
 /* Team caption */
 .team-member .team {
-    font-size: 16px;  /* Font size for the team role */
+    font-size: 14px;  /* Font size for the team role */
     color: #777;  /* Slightly lighter color for the team role */
     /* margin-bottom: 10px;  Margin between role and description */
 }
 
-/* Designation caption */
-.team-member .designation {
-    font-size: 14px;  /* Font size for the designation */
-    color: #555;  /* Slightly darker color for designation */
-    margin-bottom: 10px;  /* Margin between designation and next element */
-}
-
 /* Location caption */
 .team-member .city {
-    font-size: 14px;  /* Font size for the location */
+    font-size: 12px;  /* Font size for the location */
     color: #555;  /* Darker color for the location */
 }
 
@@ -57,7 +50,7 @@
 
 /* General styling */
 .toggle-container {
-    margin: 20px;
+    margin: 20px 20px 40px 20px ;
     display: flex;
     border: 2px solid #ff007f;
     border-radius: 30px;
@@ -74,6 +67,7 @@
     border: none;
     outline: none;
     font-family: Inter, sans-serif;
+    font-weight: 700;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -105,3 +99,12 @@
   .team-item[data-category="current"] {
     display: block; /* Show current team items by default */
   }
+
+  .team-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.team-header h1 {
+    margin: 20px 0 40px 0;
+}
