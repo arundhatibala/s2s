@@ -30,13 +30,13 @@
                 <a class="nav-link" href="portfolio.html">PORTFOLIO <span class="arrow"></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#team">TEAM <span class="arrow"></span></a>
+                <a class="nav-link" href="team.html">TEAM <span class="arrow"></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#funding">FUNDING <span class="arrow"></span></a>
+                <a class="nav-link" href="#">FUNDING <span class="arrow"></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#join">JOIN <span class="arrow"></span></a>
+                <a class="nav-link" href="#">JOIN <span class="arrow"></span></a>
             </li>
         </ul>
     </div>
@@ -92,132 +92,195 @@
 
     <!-- Category Filter Dropdown -->
     <div class="dropdown-container">
-    <div class="dropdown container">
-        <select class="form-select" onchange="filterCategory(this)">
-            <option value="">All Categories</option>
-            <option value="agriculture">Agriculture & Food</option>
-            <option value="climate">Climate & Sustainability</option>
-            <option value="consumer">Consumer & Lifestyle</option>
-            <option value="deep-tech">Deep Tech</option>
-        </select>
+        <div class="dropdown container">
+            <select class="form-select" onchange="filterCategory(this)">
+                <option value="">All Categories</option>
+                <option value="health-life-sciences">Health & Life Sciences</option>
+                <option value="enterprise-saas">Enterprise & SaaS</option>
+                <option value="deep-tech">Deep Tech</option>
+                <option value="agriculture-food">Agriculture & Food</option>
+                <option value="climate-sustainability">Climate & Sustainability</option>
+                <option value="digital-economy">Digital Economy</option>
+                <option value="consumer-lifestyle">Consumer & Lifestyle</option>
+            </select>
+        </div>
     </div>
-    </div>
-
-    <!-- Company Grid -->
+    
     <div class="company-grid">
-        <!-- Each item has a data-category attribute indicating its category -->
-        <div class="company-item" data-category="agriculture">
+        <!-- Health & Life Sciences -->
+        <div class="company-item" data-category="health-life-sciences">
             <h2>
-                Hoshi 
-                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
-                    <i class="bi-linkedin"></i>
+                Adaptyv Biosystems 
+                <a href="https://www.adaptyvbiosystems.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
                 </a>
             </h2>
-            <p>Hoshi builds AI agents to automate wholesaler workflows.</p>
+            <p>Health & Life Sciences</p>
         </div>
-        <div class="company-item" data-category="agriculture">
+        <div class="company-item" data-category="enterprise-saas">
             <h2>
-                askEarth 
-                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
-                    <i class="bi bi-linkedin"></i>
+                Ailegis
+                <a href="https://www.ailegis.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
                 </a>
             </h2>
-            <p>Focused on sustainable agricultural practices.</p>
+            <p>Enterprise & SaaS</p>
         </div>
-        <div class="company-item" data-category="agriculture">
+        <div class="company-item" data-category="enterprise-saas">
             <h2>
-                GreenFarm 
-                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
-                    <i class="bi bi-linkedin"></i>
+                askEarth
+                <a href="https://www.askearth.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
                 </a>
             </h2>
-            <p>Promotes eco-friendly farming techniques.</p>
+            <p>Enterprise & SaaS</p>
         </div>
-
-        <div class="company-item" data-category="climate">
+        <div class="company-item" data-category="climate-sustainability">
             <h2>
-                Catchfree 
-                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
-                    <i class="bi bi-linkedin"></i>
+                Biosimo Chemicals
+                <a href="https://www.biosimo.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
                 </a>
             </h2>
-            <p>Produces plant-based alternatives to seafood.</p>
+            <p>Climate & Sustainability</p>
         </div>
-        <div class="company-item" data-category="climate">
+        <div class="company-item" data-category="digital-economy">
             <h2>
-                EcoDrive 
-                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
-                    <i class="bi bi-linkedin"></i>
+                Bollwerk
+                <a href="https://www.bollwerk.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
                 </a>
             </h2>
-            <p>Reduces vehicle emissions with sustainable tech.</p>
+            <p>Digital Economy</p>
         </div>
-        <div class="company-item" data-category="climate">
+        <div class="company-item" data-category="agriculture-food">
             <h2>
-                SolarGrid 
-                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
-                    <i class="bi bi-linkedin"></i>
+                Catchfree
+                <a href="https://www.catchfree.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
                 </a>
             </h2>
-            <p>Offers solar energy solutions for rural areas.</p>
+            <p>Agriculture & Food</p>
         </div>
-
-        <div class="company-item" data-category="consumer">
+        <div class="company-item" data-category="health-life-sciences">
             <h2>
-                LifestylePro 
-                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
-                    <i class="bi bi-linkedin"></i>
+                Citus
+                <a href="https://www.citus.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
                 </a>
             </h2>
-            <p>An app tailored to personalized lifestyle enhancements.</p>
+            <p>Health & Life Sciences</p>
         </div>
-        <div class="company-item" data-category="consumer">
+        <div class="company-item" data-category="enterprise-saas">
             <h2>
-                WellNest 
-                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
-                    <i class="bi bi-linkedin"></i>
+                ClimaLinks
+                <a href="https://www.climalinks.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
                 </a>
             </h2>
-            <p>A wellness platform focusing on mental health.</p>
+            <p>Enterprise & SaaS</p>
         </div>
-        <div class="company-item" data-category="consumer">
+        <div class="company-item" data-category="enterprise-saas">
             <h2>
-                TrendyTech 
-                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
-                    <i class="bi bi-linkedin"></i>
+                Correntics
+                <a href="https://www.correntics.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
                 </a>
             </h2>
-            <p>Latest trends in wearable consumer electronics.</p>
+            <p>Enterprise & SaaS</p>
         </div>
-
-        <div class="company-item" data-category="deep-tech">
+        <div class="company-item" data-category="climate-sustainability">
             <h2>
-                Ailegis 
-                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
-                    <i class="bi bi-linkedin"></i>
+                Cotierra
+                <a href="https://www.cotierra.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
                 </a>
             </h2>
-            <p>Automates legal document drafting using AI.</p>
+            <p>Climate & Sustainability</p>
         </div>
         <div class="company-item" data-category="deep-tech">
             <h2>
-                NeuroSync 
-                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
-                    <i class="bi bi-linkedin"></i>
+                Enantios
+                <a href="https://www.enantios.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
                 </a>
             </h2>
-            <p>Focuses on brain-computer interface tech.</p>
+            <p>Deep Tech</p>
+        </div>
+        <div class="company-item" data-category="health-life-sciences">
+            <h2>
+                Enhance-D
+                <a href="https://www.enhance-d.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
+                </a>
+            </h2>
+            <p>Health & Life Sciences</p>
+        </div>
+        <div class="company-item" data-category="digital-economy">
+            <h2>
+                FRIGG
+                <a href="https://www.frigg.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
+                </a>
+            </h2>
+            <p>Digital Economy</p>
+        </div>
+        <div class="company-item" data-category="enterprise-saas">
+            <h2>
+                Hoshī
+                <a href="https://www.hoshi.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
+                </a>
+            </h2>
+            <p>Enterprise & SaaS</p>
+        </div>
+        <div class="company-item" data-category="health-life-sciences">
+            <h2>
+                IMAI
+                <a href="https://www.imai.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
+                </a>
+            </h2>
+            <p>Health & Life Sciences</p>
+        </div>
+        <div class="company-item" data-category="enterprise-saas">
+            <h2>
+                Intonate
+                <a href="https://www.intonate.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
+                </a>
+            </h2>
+            <p>Enterprise & SaaS</p>
         </div>
         <div class="company-item" data-category="deep-tech">
             <h2>
-                QuantumLeap 
-                <a href="https://linkedin.com" target="_blank" class="linkedin-icon">
-                    <i class="bi bi-linkedin"></i>
+                K2 Photonics
+                <a href="https://www.k2photonics.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
                 </a>
             </h2>
-            <p>Develops advanced quantum computing solutions.</p>
+            <p>Deep Tech</p>
+        </div>
+        <div class="company-item" data-category="agriculture-food">
+            <h2>
+                Kora Labs
+                <a href="https://www.koralabs.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
+                </a>
+            </h2>
+            <p>Agriculture & Food</p>
+        </div>
+        <div class="company-item" data-category="health-life-sciences">
+            <h2>
+                Maven Health
+                <a href="https://www.mavenhealth.com" target="_blank" class="link-icon">
+                    <i class="bi bi-link"></i>
+                </a>
+            </h2>
+            <p>Health & Life Sciences</p>
         </div>
     </div>
+     
 </div>
 
 

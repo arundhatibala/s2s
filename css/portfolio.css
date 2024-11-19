@@ -85,6 +85,17 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.image-container-2 {
+    width: 60%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../media/team.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 
 /* Stack vertically on smaller screens */
@@ -493,34 +504,54 @@
 }
 
 /* Company Grid Styles */
-.company-grid {
+/* .company-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
-}
+} */
 
+/* Container for the company item */
 .company-item {
     background: transparent;
-    /* border: #000040 1px solid; */
     border-radius: 0px;
     padding: 30px;
-    width: calc(33% - 40px);
+    /* width: calc(50% - 40px); */
     box-sizing: border-box;
     text-align: left;
+    margin-bottom: 20px;  /* Added margin for spacing between items */
+    /* border: #000040 1px solid; */
 }
 
+/* Title and icon in the same line */
 .company-item h2 {
     color: var(--neon-blue);
     font-weight: bold;
-    margin-bottom: 10px;
     font-size: 25px;
+    display: flex;  /* Align title and icon in a row */
+    align-items: center;  /* Vertically center the icon with the title */
+    margin-bottom: 5px;  /* Small margin between title and description */
 }
 
-.company-item p {
-    color: #555;
+/* Icon style */
+.company-item h2 a {
+    margin-left: 10px;  /* Space between title and icon */
 }
+
+/* Category caption */
+.company-item .category {
+    font-size: 16px;  /* Font size for the category */
+    color: #777;  /* Slightly lighter color for the category */
+    margin-bottom: 10px;  /* Margin between category and description */
+}
+
+/* Description of the company */
+.company-item .company-description {
+    color: #555;
+    font-size: 14px;  /* Default size for description */
+}
+
 
 /* Responsive Design */
 @media (max-width: 900px) {
@@ -565,7 +596,7 @@
 .dropdown-container {
     display: flex;
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: left;
 }
 
@@ -597,6 +628,62 @@
     display: none;
 }
 
-.bi-linkedin {
-    color: white;
+.bi-link {
+    color: var(--neon-pink);
 }
+
+
+/* Portfolio Section */
+.portfolio-section {
+    display: flex;  /* Use flexbox for the section */
+    justify-content: space-between;  /* Space between title and dropdown */
+    align-items: center;  /* Vertically center the elements */
+    padding: 60px 40px;
+    background-color: #f6f6f6;
+    flex-direction: column;
+}
+
+/* Title */
+.portfolio-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000040;
+    margin: 0;  /* Remove default margin */
+}
+
+/* Pink Dot */
+.pink-dot {
+    color: #ff007f;
+}
+
+
+/* Form Select */
+.form-select {
+    width: 300px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 3px solid #ddd;
+    background: transparent;
+    color: #3f3f3f;
+    font-size: 15px;
+    appearance: none;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Hover and focus effects */
+.category-dropdown .form-select:hover,
+.category-dropdown .form-select:focus {
+    border-color: var(--neon-pink);
+    outline: none;
+}
+
+/* Remove dropdown arrow for modern browsers */
+.category-dropdown select::-ms-expand {
+    display: none;
+}
+
+.bi-link {
+    color: var(--neon-pink);
+}
+
