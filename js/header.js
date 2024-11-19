@@ -168,7 +168,7 @@ function filterCategory(selectElement) {
       if (!selectedCategory || item.dataset.category === selectedCategory) {
           item.style.opacity = '1'; // Show item
       } else {
-          item.style.opacity = '0.2'; // Hide item
+          item.style.opacity = '0.1'; // Hide item
       }
   });
 }
