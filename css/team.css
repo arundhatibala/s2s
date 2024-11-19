@@ -1,0 +1,98 @@
+/* Container for the team item */
+.team-item {
+    background: transparent;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    margin-bottom: 20px;  /* Spacing between items */
+}
+
+/* Title and icon in the same line */
+.team-member h2 {
+    color: var(--neon-blue);
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;  /* Align title and icon in a row */
+    align-items: center;  /* Vertically center the icon with the title */
+    margin-bottom: 5px;  /* Small margin between title and description */
+}
+
+/* Icon style */
+.team-member h2 a {
+    margin-left: 10px;  /* Space between title and icon */
+}
+
+/* Team caption */
+.team-member .team {
+    font-size: 16px;  /* Font size for the team role */
+    color: #777;  /* Slightly lighter color for the team role */
+    /* margin-bottom: 10px;  Margin between role and description */
+}
+
+/* Designation caption */
+.team-member .designation {
+    font-size: 14px;  /* Font size for the designation */
+    color: #555;  /* Slightly darker color for designation */
+    margin-bottom: 10px;  /* Margin between designation and next element */
+}
+
+/* Location caption */
+.team-member .city {
+    font-size: 14px;  /* Font size for the location */
+    color: #555;  /* Darker color for the location */
+}
+
+/* Styling for the LinkedIn icon */
+.link-icon i {
+    color: var(--neon-pink);  /* LinkedIn blue */
+    font-size: 20px;
+}
+
+/* Hover effect for LinkedIn icon */
+.link-icon i:hover {
+    color: #005582;  /* Darker blue when hovering */
+}
+
+
+/* General styling */
+.toggle-container {
+    margin: 20px;
+    display: flex;
+    border: 2px solid #ff007f;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 300px;
+    /* background-color: #ffffff; */
+}
+
+/* Button styles */
+.btn {
+    flex: 1;
+    padding: 10px 20px;
+    width: fit-content;
+    border: none;
+    outline: none;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Active button */
+.btn-toggle.active {
+    background-color: #ff007f;
+    color: #ffffff;
+    border-radius: 30px;
+}
+
+/* Inactive button */
+.btn-toggle {
+    background-color: transparent;
+    color: #000000;
+}
+
+/* Hover effect for inactive buttons */
+.btn-toggle:not(.active):hover {
+    color: #ff007f;
+}

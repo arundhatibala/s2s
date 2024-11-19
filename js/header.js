@@ -178,5 +178,30 @@ function filterCategory(selectElement) {
 }
 
 
+// Function to handle button click and filter team items
+function filterTeam(teamCategory) {
+  // Handle toggle button active state
+  const buttons = document.querySelectorAll('.btn-toggle');
+  buttons.forEach((btn) => {
+      // Match the button's text with the selected category and toggle the 'active' class
+      if (btn.textContent.includes(teamCategory === 'current' ? 'Active' : 'Alumni')) {
+          btn.classList.add('active');
+      } else {
+          btn.classList.remove('active');
+      }
+  });
 
+  // Filter the team items based on the selected category
+  const allItems = document.querySelectorAll('.team-item');
+  allItems.forEach(item => {
+      if (teamCategory === 'current') {
+          item.style.display = item.dataset.category === 'current' ? 'block' : 'none';
+      } else if (teamCategory === 'alumni') {
+          item.style.display = item.dataset.category === 'alumni' ? 'block' : 'none';
+      } else {
+          item.style.display = 'block'; // Default to showing all items
+      }
+  });
 
+  console.log(`${teamCategory} team selected`);
+}
