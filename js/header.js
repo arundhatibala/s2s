@@ -166,9 +166,9 @@ function filterCategory(selectElement) {
 
   items.forEach(item => {
       if (!selectedCategory || item.dataset.category === selectedCategory) {
-          item.style.display = 'block'; // Show item
+          item.style.opacity = '1'; // Show item
       } else {
-          item.style.display = 'none'; // Hide item
+          item.style.opacity = '0.2'; // Hide item
       }
   });
 }
