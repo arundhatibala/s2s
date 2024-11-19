@@ -204,3 +204,24 @@ function filterTeam(teamCategory) {
 
   console.log(`${teamCategory} team selected`);
 }
+
+
+
+// GSAP Scroll-based Animation
+window.addEventListener('scroll', function() {
+  const scrollY = window.scrollY; // Get the scroll position
+
+  // GSAP animation for hexagon-1
+  gsap.to('.hexagon-1', {
+      y: scrollY * 0.2, // Increase multiplier to make it move by 20px (adjust as needed)
+      ease: 'power1.out', // Smooth easing for the animation
+      duration: 0.2, // Duration of each frame for smoothness
+  });
+
+  // GSAP animation for hexagon-2
+  gsap.to('.hexagon-2', {
+      y: scrollY * 0.2, // Same effect for the second hexagon
+      ease: 'power1.out', // Smooth easing for the animation
+      duration: 0.2, // Duration of each frame for smoothness
+  });
+});

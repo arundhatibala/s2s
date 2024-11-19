@@ -493,3 +493,84 @@ a.nav-link {
     }
   }
   
+
+
+
+  /* Navbar styling */
+.navbar {
+    padding: 20px;
+    position: sticky;
+    z-index: 1000;
+    background-color: var(--neon-blue);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* When scrolled */
+.navbar.scrolled {
+    background-color: rgba(35, 35, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar links */
+.navbar-nav {
+    display: flex; /* Ensure navbar items are aligned properly */
+    align-items: center; /* Align items vertically */
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    position: relative;
+    transition: transform 0.3s, color 0.2s;
+    margin: 0 10px; /* Adjust spacing between items */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff !important;
+}
+
+/* Navbar underline effect */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 3px;
+    width: 99%;
+    background-color: var(--neon-pink);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-nav .nav-item-active .nav-link::after {
+    transform: scaleX(1);
+}
+
+/* Navbar toggler styling */
+.navbar-toggler {
+    border: none;
+}
+
+/* Navbar link and item styling */
+a.nav-link {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff !important;
+    padding: 10px 15px; /* Ensure consistent padding */
+}
+
+/* Ensure no excessive margins between items */
+.nav-item {
+    margin-right: 0; /* Reset right margin */
+}
+
+.nav-item:last-child {
+    margin-right: 0; /* Remove margin from last item */
+}
+
+
