@@ -18,19 +18,6 @@ document.getElementById('hamburger').addEventListener('click', function() {
 });
 
 
-document.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-
-    // Move hexagon-1 based on scroll
-    const hexagon1 = document.querySelector('.hexagon-1');
-    hexagon1.style.transform = `translate(-50%, -50%) translateY(${scrollY * 0.1}px)`;
-
-    // Move hexagon-2 based on scroll
-    const hexagon2 = document.querySelector('.hexagon-2');
-    hexagon2.style.transform = `translate(-50%, -50%) translateY(${scrollY * 0.15}px) rotate(20deg)`;
-});
-
-
 // set the starting position of the cursor outside of the screen
 var clientX = -300,
     clientY = -300
@@ -224,4 +211,25 @@ window.addEventListener('scroll', function() {
       ease: 'power1.out', // Smooth easing for the animation
       duration: 0.2, // Duration of each frame for smoothness
   });
+});
+
+
+document.addEventListener("scroll", function () {
+  const hexagon1 = document.querySelector(".hexagon-1");
+  const hexagon2 = document.querySelector(".hexagon-2");
+  const heroSection = document.querySelector(".hero");
+
+  const heroRect = heroSection.getBoundingClientRect();
+  const hexHeight = hexagon1.offsetHeight;
+
+  // Determine the scroll offset
+  if (heroRect.top <= 0 && heroRect.bottom >= hexHeight) {
+      const offset = Math.min(-heroRect.top, heroRect.height - hexHeight);
+      hexagon1.style.transform = `translateY(${offset}px)`;
+      hexagon2.style.transform = `translateY(${offset + 20}px)`; // Add slight difference for visual effect
+  } else {
+      // Reset to original position
+      hexagon1.style.transform = "translateY(0)";
+      hexagon2.style.transform = "translateY(0)";
+  }
 });

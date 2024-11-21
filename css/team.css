@@ -108,3 +108,8 @@
 .team-header h1 {
     margin: 20px 0 40px 0;
 }
+
+h4 {
+    font-weight: 700;
+    text-align: left;
+}

@@ -49,13 +49,13 @@
 
     <!-- Intro Section -->
     <section class="intro-section">
-            <div class="image-container-2 container-1">
-        </div>
         <div class="intro-content">
             <h1>A UNIQUE<br>CHANCE<span class="pink-dot">.</span></h1>
             <p style = "text-align: justify;">S2S Ventures is entirely run by students. We don’t just teach investing, we offer hands-on experience in leading a VC fund. From developing investment strategies to managing a startup portfolio, our student team takes on real responsibility and makes key decisions. If you're a student in Switzerland with a passion for startups or venture capital and thrive on the freedom to create, S2S Ventures is where you belong!</p>
             <button class="btn-primary">Join our team</button>
         </div>
+            <div class="image-container-2 container-1">
+            </div>
     </section>
     
 
@@ -91,7 +91,9 @@
     </div>
 
     <div class="buttons-testimonial">
-        <button class="btn-primary-dark">Email us your Questions</button>
+        <a href = "mailto:hello@s2s.vc">
+          <button class="btn-primary-dark" style ="width: fit-content;">Email us your questions</button>
+        </a>
     </div>
 </section>
 
@@ -104,10 +106,13 @@
 
 <!-- Category Toggle -->
 <div class="toggle-container">
-    <button class="btn btn-toggle active" onclick="filterTeam('current')">Active Team</button>
+    <button class="btn btn-toggle active" onclick="filterTeam('current')">Team</button>
     <button class="btn btn-toggle" onclick="filterTeam('alumni')">Alumni</button>
+    <button class="btn btn-toggle" onclick="filterTeam('alumni')">Advisor</button>
+
 </div>
 </div>
+<h4>BOARD</h4>
 <div class="row container-1">
     <!-- Senior team members first -->
     <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
