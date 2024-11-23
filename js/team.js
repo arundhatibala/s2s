@@ -15,7 +15,7 @@ const teamMembers = [
     { name: "Rayane Charif", city: "Lausanne", role: "Investment Analyst", linkedin: "https://www.linkedin.com/in/rayane-charif", category: "" },
     { name: "Aurélie Hadid", city: "Zurich", role: "Legal Expert", linkedin: "https://www.linkedin.com/in/aurelie-hadid", category: "" },
     { name: "Benjamin Lebus", city: "Zurich", role: "Legal Expert", linkedin: "https://www.linkedin.com/in/benjamin-lebus", category: "" },
-    { name: "Salvatore Magnano", city: "Zurich", role: "Event Lead", linkedin: "https://www.linkedin.com/in/salvatore-magnano", category: "" }
+    { name: "Salvatore Magnano", city: "Zurich", role: "Event Lead", linkedin: "https://www.linkedin.com/in/salvatore-magnano", category: "" },
 ];
 
 // Advisor-specific data
@@ -111,9 +111,28 @@ function renderTeamMembers(containerSelector, teamData) {
     // Dynamically get categories from the team members data
     const categories = ['BOARD', 'INVESTORS', 'OPERATIONS'];
 
+    // Find the maximum number of items in any category
+    const maxItems = Math.max(
+        ...categories.map(category => teamData.filter(member => member.category === category).length)
+    );
+
     categories.forEach(category => {
         // Filter members by category
-        const filteredMembers = teamData.filter(member => member.category === category);
+        let filteredMembers = teamData.filter(member => member.category === category);
+
+        // Calculate how many dummy members to add
+        const missingItems = maxItems - filteredMembers.length;
+
+        // Add dummy members if necessary
+        for (let i = 0; i < missingItems; i++) {
+            filteredMembers.push({
+                name: 'Dummy Member',
+                linkedin: '#',
+                city: '',
+                role: 'N/A',
+                category: category
+            });
+        }
 
         // Only render the category if there are team members for it
         if (filteredMembers.length > 0) {
@@ -133,6 +152,11 @@ function renderTeamMembers(containerSelector, teamData) {
                 const col = document.createElement("div");
                 col.className = "col-12 col-sm-12 col-md-4 col-lg-3 team-item";
                 col.setAttribute("data-category", member.category);
+
+                // If this is a dummy member, add a class to hide it
+                if (member.name === 'Dummy Member') {
+                    col.classList.add('dummy-item');
+                }
 
                 // Populate column content
                 col.innerHTML = `
@@ -158,6 +182,69 @@ function renderTeamMembers(containerSelector, teamData) {
     });
 }
 
+
+
+
+// function renderTeamMembers(containerSelector, teamData) {
+//     // Select the container
+//     const container = document.querySelector(containerSelector);
+//     const containers = document.querySelectorAll('.category-section'); // replace with the correct selector
+
+//     // Loop through each container and clear its content
+//     containers.forEach(container => {
+//         container.innerHTML = ""; // Clear content
+//     });
+
+//     // Dynamically get categories from the team members data
+//     const categories = ['BOARD', 'INVESTORS', 'OPERATIONS'];
+
+//     categories.forEach(category => {
+//         // Filter members by category
+//         const filteredMembers = teamData.filter(member => member.category === category);
+
+//         // Only render the category if there are team members for it
+//         if (filteredMembers.length > 0) {
+//             // Create a row for this category
+//             const row = document.createElement("div");
+//             row.className = "row team-row";
+
+//             // Add a header for the category
+//             const header = document.createElement("h4");
+//             header.className = "col-12 text-left mt-4";
+//             header.textContent = category;
+//             row.appendChild(header);
+
+//             // Loop through each filtered member
+//             filteredMembers.forEach(member => {
+//                 // Create a column
+//                 const col = document.createElement("div");
+//                 col.className = "col-12 col-sm-12 col-md-4 col-lg-3 team-item";
+//                 col.setAttribute("data-category", member.category);
+
+//                 // Populate column content
+//                 col.innerHTML = `
+//                     <div class="team-member">
+//                         <h2 class="fs-4">
+//                             ${member.name}
+//                             <a href="${member.linkedin}" target="_blank" class="link-icon ms-2">
+//                                 <i class="bi bi-linkedin"></i>
+//                             </a>
+//                         </h2>
+//                         <p class="city">${member.city}</p>
+//                         <p class="team">${member.role}</p>
+//                     </div>
+//                 `;
+
+//                 // Append the column to the row
+//                 row.appendChild(col);
+//             });
+
+//             // Append the row to the container
+//             container.appendChild(row);
+//         }
+//     });
+// }
+
 // Function to render alumni
 function renderAlumni(containerSelector, alumniData) {
     const container = document.querySelector(containerSelector);
@@ -182,6 +269,7 @@ containers.forEach(container => {
                         <i class="bi bi-linkedin"></i>
                     </a>
                 </h2>
+
             </div>
         `;
 

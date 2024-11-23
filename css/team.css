@@ -28,7 +28,20 @@
         display: flex;
         margin: 2px;
     }
+    .dummy-item {
+        display: none;
+    }
 }
+
+.dummy-item {
+    visibility: hidden;
+}
+
+
+.empty-item {
+    visibility: hidden; /* Hides the empty items, but they still occupy space in the grid */
+}
+
 
 /* Title and icon in the same line */
 .team-member h2 {
