@@ -1,11 +1,33 @@
 /* Container for the team item */
+
+.testimonial-grid {
+    gap: 20px;
+}
+
+.testimonial-box {
+    margin:  0;
+
+}
+
 .team-item {
     background: transparent;
     border-radius: 8px;
     padding: 20px;
     box-sizing: border-box;
     text-align: left;
-    margin-bottom: 20px;  /* Spacing between items */
+    /* margin-bottom: 20px;  Spacing between items */
+}
+
+.buttons-testimonial {
+    display: flex;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .buttons-testimonial {
+        display: flex;
+        margin: 2px;
+    }
 }
 
 /* Title and icon in the same line */
@@ -15,7 +37,7 @@
     font-size: 16px;
     display: flex;  /* Align title and icon in a row */
     align-items: center;  /* Vertically center the icon with the title */
-    margin-bottom: 5px;  /* Small margin between title and description */
+    /* margin-bottom: 5px;  Small margin between title and description */
 }
 
 /* Icon style */

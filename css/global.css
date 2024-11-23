@@ -276,6 +276,10 @@ a.nav-link {
     /* padding-top: 100px; */
 }
 
+.buttons-hero-box .btn-primary {
+    width: 100%;
+}
+
 /* Button styles for light and dark mode */
 .btn-primary, .btn-secondary, .btn-secondary-light, .btn-light-mode, .btn-dark-mode {
     font-weight: 600;
@@ -440,8 +444,7 @@ a.nav-link {
 }
 
 .testimonial-section h1 {
-    padding-bottom: 50px;
-    padding-top: 20px;
+    padding-bottom: 50px 30px 20px 30px;
     font-size: 2.5rem;
     text-align: left;
     font-weight: 700;
@@ -450,7 +453,20 @@ a.nav-link {
 .testimonial-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 20px 0;
+    gap: 20px;
+}
+@media (max-width: 1024px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets and medium screens */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-grid {
+        gap: 20px;
+        grid-template-columns: 1fr; /* 1 column for mobile and small screens */
+    }
 }
 
 .testimonial-box {

@@ -27,7 +27,7 @@
       height: 20px;
       border-radius: 50%;
       border: 1px solid var(--neon-pink);
-      /* background-color: #ff008061; */
+      background-color: #ff008061;
       z-index: 10000;
       display: flex;
       align-items: center;
