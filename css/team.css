@@ -49,14 +49,50 @@
 
 
 /* General styling */
-.toggle-container {
-    margin: 20px 20px 40px 20px ;
+.nav .toggle-container .nav-pills{
+    /* margin: 20px 20px 40px 20px ; */
     display: flex;
     border: 2px solid #ff007f;
     border-radius: 30px;
     overflow: hidden;
     width: 300px;
     /* background-color: #ffffff; */
+}
+
+#pills-current-tab.nav-link.btn-toggle {
+    border-radius: 30px 0 0 30px;
+    border-color: transparent;
+    background-color: #ffffff;
+}
+#pills-current-tab.nav-link.btn-toggle.active {
+    border-radius: 30px 0 0 30px;
+    border-color: transparent;
+    background-color: #ff007f;
+}
+#pills-advisors-tab.nav-link.btn-toggle {
+    border-radius: 0px 0 0 0px;
+    border-color: transparent;
+    background-color: #ffffff;
+}
+#pills-advisors-tab.nav-link.btn-toggle.active {
+    border-radius: 0px 0 0 0px;
+    border-color: transparent;
+    background-color: #ff007f;
+}
+
+#pills-alumni-tab.nav-link.btn-toggle {
+    border-radius: 0px 30px 30px 0px;
+    border-color: transparent;
+    background-color: #ffffff;
+}
+#pills-alumni-tab.nav-link.btn-toggle.active {
+    border-radius: 0px 30px 30px 0px;
+    border-color: transparent;
+    background-color: #ff007f;
+}
+
+.toggle-container h1 {
+    padding-bottom: 30px;
 }
 
 /* Button styles */
@@ -81,7 +117,7 @@
 }
 
 /* Inactive button */
-.btn-toggle {
+.btn-toggle .nav-link{
     background-color: transparent;
     color: #000000;
 }
@@ -105,11 +141,38 @@
     display: flex;
     justify-content: space-between;
 }
-.team-header h1 {
+/* .team-header h1 {
     margin: 20px 0 40px 0;
-}
+} */
 
 h4 {
     font-weight: 700;
     text-align: left;
+}
+
+
+/* .tab-content {
+    position: relative;
+} */
+.tab-content > .tab-pane {
+    display: unset;
+    left: 0;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+.tab-content > .tab-pane.active {
+    opacity: 1;
+}
+
+.team-row {
+    margin: 0 10px;
+}
+
+
+.tab-pane {
+    display: none; /* Bootstrap hides inactive tabs */
+}
+
+.tab-pane.active.show {
+    display: block; /* Show only the active tab */
 }

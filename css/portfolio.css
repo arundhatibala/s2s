@@ -118,6 +118,7 @@
     width: fit-content;
     display: flex;
     justify-content: left;
+    align-items: start;
     flex-direction: column;
     padding-bottom: 50px;
     /* margin-left: -50px; */
@@ -624,6 +625,7 @@
 
 .dropdown .container {
 padding: 0;
+width: fit-content;
 /* margin-right: 100px */
 }
 
@@ -725,4 +727,8 @@ h1 {
 .buttons-testimonial button {
     width: 200px;
     margin-bottom: 10px;
+}
+
+.team-header  h1 {
+    padding-bottom: 30px;
 }

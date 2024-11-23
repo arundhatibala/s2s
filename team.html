@@ -104,225 +104,43 @@
     <div class = "team-header">
     <h1>MEET OUR TEAM<span class="pink-dot">.</span></h1>
 
-<!-- Category Toggle -->
-<div class="toggle-container">
-    <button class="btn btn-toggle active" onclick="filterTeam('current')">Team</button>
-    <button class="btn btn-toggle" onclick="filterTeam('alumni')">Alumni</button>
-    <button class="btn btn-toggle" onclick="filterTeam('alumni')">Advisor</button>
+<!-- Navigation Tabs -->
+<ul class="nav toggle-container" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link btn-toggle active" id="pills-current-tab" data-bs-toggle="pill" data-bs-target="#pills-current" type="button" role="tab" aria-controls="pills-current" aria-selected="true">Current</button>
+    </li>
+    <li class="nav-item tab-item" role="presentation">
+        <button class="nav-link btn-toggle" id="pills-advisors-tab" data-bs-toggle="pill" data-bs-target="#pills-advisors" type="button" role="tab" aria-controls="pills-advisors" aria-selected="false">Advisors</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link btn-toggle" id="pills-alumni-tab" data-bs-toggle="pill" data-bs-target="#pills-alumni" type="button" role="tab" aria-controls="pills-alumni" aria-selected="false">Alumni</button>
+    </li>
+</ul>
+</div>
 
-</div>
-</div>
-<h4>BOARD</h4>
-<div class="row container-1">
-    <!-- Senior team members first -->
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Max Schaldach
-                <a href="https://www.linkedin.com/in/max-schaldach" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">Zurich</p>
-            <p class="team">Partner & President</p>
+<!-- Tab Content -->
+<div class="tab-content" id="pills-tabContent">
+    <!-- Current Tab -->
+    <div class="tab-pane fade show active" id="pills-current" role="tabpanel" aria-labelledby="pills-current-tab">
+        <div class="category-section team row" id="pills-board">
         </div>
     </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Giammarco Bozzelli
-                <a href="https://www.linkedin.com/in/giammarcobozzelli" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">Lausanne</p>
-            <p class="team">Partner & VP</p>
+    <!-- Advisors Tab -->
+    <div class="tab-pane fade" id="pills-advisors" role="tabpanel" aria-labelledby="pills-advisors-tab">
+        <div class="category-section row advisors" id="pills-advisors-tab">
         </div>
     </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Simon Schütz
-                <a href="https://www.linkedin.com/in/simon-schutz" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">St Gallen</p>
-            <p class="team">Partner & VP</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Nora Zimmerli
-                <a href="https://www.linkedin.com/in/nora-zimmerli" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">Zurich</p>
-            <p class="team">Partner & VP</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Maia Migliaro
-                <a href="https://www.linkedin.com/in/maia-migliaro" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">Lausanne</p>
-            <p class="team">Partner</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Tom Blackmore-Esslinger
-                <a href="https://www.linkedin.com/in/tom-blackmore-esslinger" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">St Gallen</p>
-            <p class="team">Partner</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Elyssa Siblini
-                <a href="https://www.linkedin.com/in/elyssa-siblini" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">Lausanne</p>
-            <p class="team">Portfolio Manager</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Marvin Troschke
-                <a href="https://www.linkedin.com/in/marvin-troschke" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">St Gallen</p>
-            <p class="team">Investment Analyst</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Oscar von Podewils
-                <a href="https://www.linkedin.com/in/oscar-von-podewils" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">St Gallen</p>
-            <p class="team">Investment Analyst</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Shuya Zhang
-                <a href="https://www.linkedin.com/in/shuya-zhang" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">St Gallen</p>
-            <p class="team">Investment Analyst</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Felix Hatzold
-                <a href="https://www.linkedin.com/in/felix-hatzold-a71b2128b/" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">Lausanne</p>
-            <p class="team">Investment Analyst</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Gaston Champagne
-                <a href="https://www.linkedin.com/in/gaston-champagne" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">Lausanne</p>
-            <p class="team">Investment Analyst</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Hanna Senn
-                <a href="https://www.linkedin.com/in/hanna-senn" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">Lausanne</p>
-            <p class="team">Investment Analyst</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Rayane Charif
-                <a href="https://www.linkedin.com/in/rayane-charif" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">Lausanne</p>
-            <p class="team">Investment Analyst</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Aurélie Hadid
-                <a href="https://www.linkedin.com/in/aurelie-hadid" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">Zurich</p>
-            <p class="team">Legal Expert</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Benjamin Lebus
-                <a href="https://www.linkedin.com/in/benjamin-lebus" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">Zurich</p>
-            <p class="team">Legal Expert</p>
-        </div>
-    </div>
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 team-item" data-category="current">
-        <div class="team-member">
-            <h2 class="fs-4">
-                Salvatore Magnano
-                <a href="https://www.linkedin.com/in/salvatore-magnano" target="_blank" class="link-icon ms-2">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-            </h2>
-            <p class="city">Zurich</p>
-            <p class="team">Event Lead</p>
+    <!-- Alumni Tab -->
+    <div class="tab-pane fade" id="pills-alumni" role="tabpanel" aria-labelledby="pills-alumni-tab">
+        <div class="category-section row alumni" id="pills-alumni-tab">
         </div>
     </div>
 </div>
+
 
     
 </div>
+</div>  
 
 
     <!-- Footer Section -->
@@ -332,8 +150,8 @@
             <p>© 2024 All Rights Reserved | S2S Ventures AG</p>
         </div>
         <div class="footer-right">
-            <a href="#" class="footer-link">TEAM</a>
             <a href="#" class="footer-link">FUNDING</a>
+            <a href="#" class="footer-link">TEAM</a>
             <a href="#" class="footer-link">PARTNER</a>
             <a href="#" class="footer-link">LINKEDIN</a>
             <a href="#" class="footer-link">EMAIL</a>
@@ -347,5 +165,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/team.js"></script>
+
 </body>
 </html>
