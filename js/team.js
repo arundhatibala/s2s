@@ -182,7 +182,6 @@ containers.forEach(container => {
                         <i class="bi bi-linkedin"></i>
                     </a>
                 </h2>
-                <p class="team">${alumnus.role}</p>
             </div>
         `;
 
