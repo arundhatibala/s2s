@@ -158,6 +158,10 @@
         padding-bottom: 20px;
         font-size: 0.9rem; /* Adjust font size */
     }
+    .image-container-2 {
+        width: 100%;
+        height: 50vh;
+    }
 }
 
 
