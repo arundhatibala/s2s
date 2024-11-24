@@ -34,7 +34,7 @@
 }
 
 .dummy-item {
-    visibility: hidden;
+    display: none;
 }
 
 
