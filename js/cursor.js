@@ -10,7 +10,7 @@ var initCursor = function() {
         });
 
         var render = function() {
-            TweenMax.set(outerCursor, { x: clientX, y: clientY, delay: 0.05, ease: Power1.easeOut });
+            TweenMax.set(outerCursor, { x: clientX, y: clientY, ease: Power1.easeOut });
             requestAnimationFrame(render);
         };
 
