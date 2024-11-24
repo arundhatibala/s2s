@@ -394,6 +394,7 @@ a.nav-link {
     font-size: 15px;
     position: relative;
     padding-right: 20px;
+    text-decoration: none;
 }
 
 .footer-link::after {
@@ -412,6 +413,7 @@ a.nav-link {
 .footer-link:hover {
     color: var(--neon-pink);
     transition: color 0.3s;
+    text-decoration: none;
 }
 
 /* Responsive styles - Media Queries */
