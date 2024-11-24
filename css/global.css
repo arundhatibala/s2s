@@ -423,6 +423,19 @@ a.nav-link {
     .footer {
         padding: 20px;
     }
+    .hexagon-1, .hexagon-2 {
+        width: 80vw;
+        height: 80vw;
+        
+    }
+    .hexagon-1 {
+        top: 65%;
+        left: 15%;
+    }
+    .hexagon-2 {
+        top: 70%;
+        left: 20%;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -467,6 +480,7 @@ a.nav-link {
         gap: 20px;
         grid-template-columns: 1fr; /* 1 column for mobile and small screens */
     }
+
 }
 
 .testimonial-box {
