@@ -752,7 +752,7 @@ h1 {
     /* justify-content: flex-end; Align the button to the bottom */
     max-width: 50%; /* Take up half the width */
     /* padding: 60px 40px; */
-    padding-top: 100px;
+    padding-top: 20px;
 }
 
 .intro-content h1 {
